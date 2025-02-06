@@ -29,7 +29,7 @@ public class ARObjectPlacerManager : MonoBehaviour
 	public GameObject Prefab;
 
 
-	public string artifactName;
+
 
 
 	private void Start()
@@ -95,7 +95,7 @@ public class ARObjectPlacerManager : MonoBehaviour
 		restartButton.gameObject.SetActive(true);
 		isObjectPlaced = true;
 
-		OpenFirstScreen();
+
 	}
 
 	private void AlignObjectWithCamera(GameObject obj)
@@ -113,7 +113,7 @@ public class ARObjectPlacerManager : MonoBehaviour
 
 	private void OnRestartButtonClicked()
 	{
-		// uiManager.DefaultCanvas.gameObject.SetActive(false); // TODO: Fix this
+
 		arInstructionPanel.SetActive(true);
 		placementIndicator.SetActive(false);
 		placeButton.gameObject.SetActive(false);
@@ -132,9 +132,7 @@ public class ARObjectPlacerManager : MonoBehaviour
 
 	public void OnQuitGame()
 	{
-		// quitButton.interactable = false;
-		// PlayerPrefs.SetInt("useForwardPlayer", 1);
-		// SceneLoader.Me.ChangeScene("NMOQ");
+		Application.Quit();
 	}
 
 	public void AssignPrefabs(GameObject obj)
@@ -143,10 +141,7 @@ public class ARObjectPlacerManager : MonoBehaviour
 		// RotateTargetObject.Me.AssignTargetObject(obj.transform);
 	}
 
-	public void OpenFirstScreen()
-	{
 
-	}
 
 	private void HandlePlacement()
 	{
@@ -196,7 +191,7 @@ public class ARObjectPlacerManager : MonoBehaviour
 	private Vector3 GetAdjustedScale()
 	{
 		Vector3 v = Vector3.one;
-		zoomConst = Vector3.Distance(arCamera.transform.position, placementIndicator.transform.position) * 1 / DetectDist;
+		zoomConst = Vector3.Distance(arCamera.transform.position, placementIndicator.transform.position) * 0.15f / DetectDist;
 		v.x = v.y = v.z = zoomConst;
 		return v;
 	}

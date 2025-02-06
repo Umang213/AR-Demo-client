@@ -122,18 +122,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &151853166 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2512387470528047737, guid: 48cb3fb68c91eb94999fd99957eb0cae,
-    type: 3}
-  m_PrefabInstance: {fileID: 331264285}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1760703bbd54c04488a8d10600262ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &331264285
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -634,36 +622,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7784671019417010986, guid: 121475de2f4379a48858a7abb529e060,
         type: 3}
-      propertyPath: Prefab
-      value: 
-      objectReference: {fileID: 2422450723745521788, guid: 93950d5810c78b84a87bde79079b3892,
-        type: 3}
-    - target: {fileID: 7784671019417010986, guid: 121475de2f4379a48858a7abb529e060,
-        type: 3}
       propertyPath: arCamera
       value: 
       objectReference: {fileID: 1549808084}
     - target: {fileID: 7784671019417010986, guid: 121475de2f4379a48858a7abb529e060,
         type: 3}
-      propertyPath: arPlaneManager
-      value: 
-      objectReference: {fileID: 151853166}
-    - target: {fileID: 7784671019417010986, guid: 121475de2f4379a48858a7abb529e060,
-        type: 3}
-      propertyPath: indicatorPrefab
-      value: 
-      objectReference: {fileID: 3383023579105521410, guid: fca975b01e8d34dcd9aea35cb7606879,
-        type: 3}
-    - target: {fileID: 7784671019417010986, guid: 121475de2f4379a48858a7abb529e060,
-        type: 3}
       propertyPath: arRaycastManager
       value: 
       objectReference: {fileID: 1617092027}
-    - target: {fileID: 7784671019417010986, guid: 121475de2f4379a48858a7abb529e060,
-        type: 3}
-      propertyPath: placementIndicator
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

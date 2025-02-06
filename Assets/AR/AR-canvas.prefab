@@ -634,7 +634,7 @@ Canvas:
   m_GameObject: {fileID: 3388670039904088956}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 0}
   m_PlaneDistance: 10
   m_PixelPerfect: 0
@@ -701,16 +701,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arRaycastManager: {fileID: 0}
-  arPlaneManager: {fileID: 0}
   arCamera: {fileID: 0}
-  placementIndicator: {fileID: 3383023579105521410, guid: fca975b01e8d34dcd9aea35cb7606879,
-    type: 3}
   arInstructionPanel: {fileID: 5181702970640225134}
   placeButton: {fileID: 1588318531213253517}
   restartButton: {fileID: 9222594938373966146}
   quitButton: {fileID: 379577686188727552}
-  objectPrefab: {fileID: 2422450723745521788, guid: 93950d5810c78b84a87bde79079b3892,
+  instantiatedObject: {fileID: 0}
+  indicatorPrefab: {fileID: 3383023579105521410, guid: fca975b01e8d34dcd9aea35cb7606879,
     type: 3}
+  Prefab: {fileID: 4080606202437704565, guid: 09ed4cb46246d459fa78f8bb58988448, type: 3}
 --- !u!1 &4672891362118201513
 GameObject:
   m_ObjectHideFlags: 0
