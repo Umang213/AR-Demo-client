@@ -191,7 +191,7 @@ public class ARObjectPlacerManager : MonoBehaviour
 	private Vector3 GetAdjustedScale()
 	{
 		Vector3 v = Vector3.one;
-		zoomConst = Vector3.Distance(arCamera.transform.position, placementIndicator.transform.position) * 0.15f / DetectDist;
+		zoomConst = Vector3.Distance(arCamera.transform.position, placementIndicator.transform.position) * 0.075f / DetectDist;
 		v.x = v.y = v.z = zoomConst;
 		return v;
 	}
