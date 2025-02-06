@@ -81,12 +81,12 @@ public class ARObjectPlacerManager : MonoBehaviour
 		{
 			instantiatedObject.transform.position = placementPose.position;
 		}
-		//instantiatedObject.transform.localScale = GetAdjustedScale();
-
+		instantiatedObject.transform.localScale = GetAdjustedScale();
+		AlignObjectWithCamera(instantiatedObject);
 		if (instantiatedObject != null)
 		{
 			AssignPrefabs(instantiatedObject);
-			AlignObjectWithCamera(instantiatedObject);
+
 
 		}
 
@@ -196,7 +196,7 @@ public class ARObjectPlacerManager : MonoBehaviour
 	private Vector3 GetAdjustedScale()
 	{
 		Vector3 v = Vector3.one;
-		zoomConst = Vector3.Distance(arCamera.transform.position, placementIndicator.transform.position) * AR_Scale.Instance.minScale / DetectDist;
+		zoomConst = Vector3.Distance(arCamera.transform.position, placementIndicator.transform.position) * 1 / DetectDist;
 		v.x = v.y = v.z = zoomConst;
 		return v;
 	}
