@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class ARObjectPlacerManager : MonoBehaviour
 {
@@ -34,8 +34,6 @@ public class ARObjectPlacerManager : MonoBehaviour
 
 	private void Start()
 	{
-
-
 		arCamera = Camera.main;
 		arRaycastManager ??= FindFirstObjectByType<ARRaycastManager>();
 
@@ -75,13 +73,14 @@ public class ARObjectPlacerManager : MonoBehaviour
 		{
 
 			instantiatedObject = Instantiate(Prefab, placementPose.position, placementPose.rotation);
-
+			AR_Rotation.Instance.AssignTargetObject(instantiatedObject);
+			AR_Scale.Instance.AssignTargetObject(instantiatedObject);
 		}
 		else
 		{
 			instantiatedObject.transform.position = placementPose.position;
 		}
-		instantiatedObject.transform.localScale = GetAdjustedScale();
+		// instantiatedObject.transform.localScale = GetAdjustedScale();
 		AlignObjectWithCamera(instantiatedObject);
 		if (instantiatedObject != null)
 		{
@@ -197,4 +196,3 @@ public class ARObjectPlacerManager : MonoBehaviour
 	}
 
 }
-
