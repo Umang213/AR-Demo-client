@@ -16,9 +16,10 @@ public class AR_Rotation : MonoBehaviour
     {
 
         //if (DetectClickOnUI.IsPointerOverUIElement()) return;
-        Debug.Log(Input.touchCount);
-        Debug.Log(Input.GetTouch(0).phase);
+        //Debug.Log(Input.touchCount);
+        //Debug.Log(Input.GetTouch(0).phase);
         if (targetObject == null || Input.touchCount != 1 || Input.GetTouch(0).phase != TouchPhase.Moved) return;
+        UIManager.Instance.OffAllPanel();
         Vector2 delta = Input.GetTouch(0).deltaPosition;
         if (Mathf.Abs(delta.x) < xSwipeThreshold && Mathf.Abs(delta.y) < ySwipeThreshold) return;
 

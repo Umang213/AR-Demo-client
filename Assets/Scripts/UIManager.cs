@@ -11,4 +11,12 @@ public class UIManager : MonoBehaviour
     {
         Instance = this;
     }
+
+    public void OffAllPanel()
+    {
+          for (int i = 0; i <Instance.infoDatas.Count; i++)
+        {
+            Instance.infoDatas[i].infoPanel.SetActive(false);
+        }
+    }
 }

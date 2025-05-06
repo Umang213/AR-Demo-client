@@ -22,6 +22,6 @@ public class InfoData : MonoBehaviour
         }
         infoPanel.SetActive(true);
 
-        ARObjectPlacerManager.Instance.instantiatedObject.transform.rotation = Quaternion.Euler(heartRoation);
+        //ARObjectPlacerManager.Instance.instantiatedObject.transform.rotation = Quaternion.Euler(heartRoation);
     }
 }
