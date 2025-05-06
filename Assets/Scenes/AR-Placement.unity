@@ -130,6 +130,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2512387469002778331, guid: 48cb3fb68c91eb94999fd99957eb0cae,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 2512387470319625105, guid: 48cb3fb68c91eb94999fd99957eb0cae,
         type: 3}
       propertyPath: m_OccludeARHitsWith2DObjects
@@ -307,7 +312,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -365,13 +370,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1075000274}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalRotation: {x: 0.25528073, y: 0.1591743, z: -0.04265063, w: 0.95272046}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 30, y: 18.97, z: 0}
 --- !u!114 &1075000277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -441,14 +446,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetObject: {fileID: 0}
   rotationSpeedX: 0
-  rotationSpeedY: 5
+  rotationSpeedY: 1
   minRotationX: 0
   maxRotationX: 0
   minRotationY: 0
   maxRotationY: 0
   rotationDuration: 0
   xSwipeThreshold: 0
-  ySwipeThreshold: 10
+  ySwipeThreshold: 2.5
   enableXRotation: 0
   enableYRotation: 1
   clampXRotation: 0
@@ -613,11 +618,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetObject: {fileID: 0}
-  minScale: 0.1
-  maxScale: 10
-  scaleSpeed: 5
-  tweenDuration: 1
-  tweenEase: 1
+  minScale: 0.5
+  maxScale: 3
+  scaleSpeed: 0.005
+  scrollSpeed: 0.1
+  smoothTime: 2.5
 --- !u!1001 &2010124204
 PrefabInstance:
   m_ObjectHideFlags: 0

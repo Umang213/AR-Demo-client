@@ -7,6 +7,7 @@ using UnityEngine.XR.ARSubsystems;
 
 public class ARObjectPlacerManager : MonoBehaviour
 {
+	public static ARObjectPlacerManager Instance;
 	[Header("AR Components")]
 	[SerializeField] private ARRaycastManager arRaycastManager;
 	[SerializeField] private Camera arCamera;
@@ -19,7 +20,7 @@ public class ARObjectPlacerManager : MonoBehaviour
 	[SerializeField] private Button quitButton;
 
 	[Header("Prefabs")]
-	[SerializeField] private GameObject instantiatedObject;
+	public GameObject instantiatedObject;
 	public GameObject indicatorPrefab;
 
 	internal Pose placementPose;
@@ -29,8 +30,10 @@ public class ARObjectPlacerManager : MonoBehaviour
 	public GameObject Prefab;
 
 
-
-
+	void Awake()
+	{
+		Instance = this;
+	}
 
 	private void Start()
 	{
